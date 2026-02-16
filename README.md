@@ -22,13 +22,13 @@ Weirdhost &amp; 自动续期 &amp; 多账号版
 ```json
 [
   {
-    "remark": "vipmc838@gmail.com",
+    "remark": "123@gmail.com",
     "id": "8a8db3cc",
     "cookie_env": "WEIRDHOST_COOKIE_1"
   },
   {
-    "remark": "admin@beck.nyc.mn",
-    "id": "e5390e67",
+    "remark": "admin@123.nyc.mn",
+    "id": "e13623",
     "cookie_env": "WEIRDHOST_COOKIE_2"
   }
 ]
