@@ -50,7 +50,7 @@ jobs:
           TG_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          RENEW_THRESHOLD_DAYS: "1"  # 到期前几天才续期
+          RENEW_THRESHOLD_DAYS: "20"  # 到期前几天才续期
         run: |
           xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" python scripts/weirdhost_renew.py
 
