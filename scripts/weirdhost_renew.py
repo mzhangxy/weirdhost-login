@@ -251,7 +251,7 @@ def is_logged_in(sb):
             return False
         if get_expiry_from_page(sb) != "Unknown":
             return True
-        if sb.is_element_present("//button//span[contains(text(), '시간추가')]"):
+        if sb.is_element_present("//button//span[contains(text(), '시간')]"):
             return True
         return False
     except:
@@ -767,9 +767,9 @@ def process_single_account(sb, account, account_index):
         print("\n[步骤4] 点击侧栏续期按钮")
         random_delay(1.0, 2.0)
 
-        sidebar_btn_xpath = "//button//span[contains(text(), '시간추가')]/parent::button"
+        sidebar_btn_xpath = "//button//span[contains(text(), '시간')]/parent::button"
         if not sb.is_element_present(sidebar_btn_xpath):
-            sidebar_btn_xpath = "//button[contains(., '시간추가')]"
+            sidebar_btn_xpath = "//button[contains(., '시간')]"
 
         if not sb.is_element_present(sidebar_btn_xpath):
             screenshot_path = f"{screenshot_prefix}_no_button.png"
