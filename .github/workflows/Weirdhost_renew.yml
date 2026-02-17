@@ -50,7 +50,7 @@ jobs:
           TG_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          RENEW_THRESHOLD_DAYS: "2"  # 到期前几天才续期
+          RENEW_THRESHOLD_DAYS: "1"  # 到期前几天才续期
         run: |
           xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" python scripts/weirdhost_renew.py
 
@@ -60,7 +60,7 @@ jobs:
 #        with:
 #          name: debug-screenshots
 #          path: "*.png"
-#          retention-days: 3
+#          retention-days: 2
 
       - name: 清理旧的工作流运行记录
         uses: Mattraks/delete-workflow-runs@v2
@@ -69,4 +69,4 @@ jobs:
           repository: ${{ github.repository }}
           delete_workflow_pattern: ${{ github.workflow }}
           retain_days: 0
-          keep_minimum_runs: 3
+          keep_minimum_runs: 2
